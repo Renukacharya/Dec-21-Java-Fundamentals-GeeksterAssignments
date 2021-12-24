@@ -1,0 +1,30 @@
+package Startithere;
+import java.util.*;
+
+public class W2D2ReverseArray {
+		
+		private static void swap(int[] nums, int i, int j)
+	    {
+	        int temp = nums[i];
+	        nums[i] = nums[j];
+	        nums[j] = temp;
+	    }
+	 
+	    // Utility method to reverse elements of an array
+	    public static void reverse(int[] nums)
+	    {
+	        for (int low = 0, high = nums.length - 1; low < high; low++, high--) {
+	            swap(nums, low, high);
+	        }
+	    }
+	 
+	    public static void main(String[] args)
+	    {
+	        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
+	 
+	        reverse(nums);
+	        System.out.println(Arrays.toString(nums));
+
+	}
+
+}
